@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/07 08:23:33 by yelousse          #+#    #+#             */
+/*   Updated: 2023/02/07 08:23:34 by yelousse         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.class.hpp"
 #include "Contact.class.hpp"
+#include <sstream>
 
 PhoneBook::PhoneBook(void)
 {
@@ -11,6 +24,25 @@ PhoneBook::~PhoneBook(void)
 	return;
 }
 
+
+void	PhoneBook::DisplayAllInfo(int i)
+{
+		std::cout << "first name :"
+				<<_contacts[i].getFirstName()
+				<< std::endl;
+		std::cout << "last name :"
+				<< _contacts[i].getLastName()
+				<< std::endl;
+		std::cout << "nickname :"
+				<< _contacts[i].getNickName()
+				<< std::endl;
+		std::cout << "phone number :"
+				<< _contacts[i].getPhoneNumber()
+				<< std::endl;
+		std::cout << "darkest secret :"
+				<< _contacts[i].getDarkestSecret()
+				<< std::endl;
+}
 void	PhoneBook::Add(void)
 {
 	Contact New;
@@ -109,7 +141,8 @@ void	PhoneBook::DisplayNN(int i)
 
 void	PhoneBook::Search()
 {
-	int index = 0;
+	int nb, index = 0;
+	std::string i;
 	if(_contacts[0].getFirstName().empty())
 	{
 		std::cout << "NO CONTACT IS ADDED"; std::cout << std::endl;
@@ -143,6 +176,22 @@ void	PhoneBook::Search()
 			PhoneBook::DisplayNN(index);
 			std::cout << std::endl;
 		}
+		break;
 		index++;
+	}
+	if (!_contacts[0].getFirstName().empty())
+	{
+		while(i.empty())
+		{
+			std::cout << "Enter the index of the contact you want to display :";
+			if(!std::getline(std::cin, i))
+				exit (1);
+		}
+		std::cout << std::endl;
+		std::istringstream(i) >> nb;
+		if (nb >= 0 && nb <= index)
+			PhoneBook::DisplayAllInfo(nb);
+		else
+			std::cout << "\t\tsorry contact not found !!\n";
 	}
 }

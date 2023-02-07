@@ -1,19 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/07 08:23:13 by yelousse          #+#    #+#             */
+/*   Updated: 2023/02/07 08:23:14 by yelousse         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
-
-// void	ft_add(PhoneBook New)
-// {
-// 	std::cout << "first name:"
-// }
 
 int	main()
 {
 	std::string i;
 	PhoneBook New;
+	std::cout << "___________________________________________________________________\n"
+			  << "|W-E-L-C-O-M-E----T-O----M-Y----A-W-E-S-O-M-E----P-H-O-N-E-B-O-O-K|\n"
+			  << "-------------------------------------------------------------------\n";
 	while(1)
 	{
 		std::cout	<< std::endl
-					<< "(1)ADD (2)SEARCH (3)EXIT :";
+					<< "\t\t\tchoose option\n"
+					<< "\t\t(1)ADD (2)SEARCH (3)EXIT :";
 		if(!std::getline(std::cin, i))
 			exit (1);
 		std::cout	<< std::endl;
@@ -24,7 +35,7 @@ int	main()
 		else if( i == "3")
 			exit (0);
 		else if(!i.empty())
-			std::cout	<< "option not found"
+			std::cout	<< "\t\tsorry option not found!!"
 						<< std::endl;
 		i.clear();
 	}
