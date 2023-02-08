@@ -6,15 +6,16 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:23:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/07 08:23:39 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:12:58 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-#define PHONEBOOK_CLASS_HPP
-#include "Contact.class.hpp"
-#include "cstring"
-#include "iomanip"
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+#include <string>
+#include <iomanip>
+#include <sstream>
+#include "Contact.hpp"
 
 
 class PhoneBook

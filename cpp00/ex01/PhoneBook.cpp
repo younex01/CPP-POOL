@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:23:33 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/07 08:23:34 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:12:43 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
-#include "Contact.class.hpp"
-#include <sstream>
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
+
 
 PhoneBook::PhoneBook(void)
 {

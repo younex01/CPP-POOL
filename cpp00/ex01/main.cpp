@@ -6,12 +6,12 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:23:13 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/07 08:23:14 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:13:14 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.class.hpp"
-#include "PhoneBook.class.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int	main()
 {

@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/08 02:11:59 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/08 02:36:09 by yelousse         ###   ########.fr        #
+#    Created: 2023/02/08 02:40:27 by yelousse          #+#    #+#              #
+#    Updated: 2023/02/08 08:14:07 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = megaphone.cpp
+SRC = Contact.cpp	PhoneBook.cpp	main.cpp
 
-NAME = megaphone
+NAME = PhoneBook
 
 OBJCS = ${SRC:.cpp=.o}
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJS)
 	@$(G) $(FLAGS) $(SRC) -o $(NAME)
 	@echo "Compiling Successfull"
 
-%.o:%.cpp megaphone.hpp
+%.o:%.cpp PhoneBook.hpp Contact.hpp
 	$(G) $(FLAGS) -c $< -o $@
 
 clean:
