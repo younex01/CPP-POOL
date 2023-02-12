@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/12 18:10:28 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/12 18:13:20 by yelousse         ###   ########.fr        #
+#    Created: 2023/02/12 19:22:30 by yelousse          #+#    #+#              #
+#    Updated: 2023/02/12 19:23:04 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
-NAME = zombie
+SRC = main.cpp
+NAME = main
 
 OBJCS = ${SRC:.cpp=.o}
 
@@ -27,7 +27,7 @@ $(NAME): $(OBJS)
 	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 	@echo "Compiling Successfull"
 
-%.o:%.cpp Zombie.hpp
+%.o:%.cpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
