@@ -5,14 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/08 02:11:59 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/10 18:26:44 by yelousse         ###   ########.fr        #
+#    Created: 2023/02/12 17:16:13 by yelousse          #+#    #+#              #
+#    Updated: 2023/02/12 17:24:41 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = megaphone.cpp
-
-NAME = megaphone
+SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+NAME = Zombie
 
 OBJCS = ${SRC:.cpp=.o}
 
@@ -28,7 +27,7 @@ $(NAME): $(OBJS)
 	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 	@echo "Compiling Successfull"
 
-%.o:%.cpp megaphone.hpp
+%.o:%.cpp Zombie.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:

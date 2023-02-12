@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 08:23:33 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/08 08:12:43 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/12 12:17:23 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,8 @@ void	PhoneBook::Search()
 			PhoneBook::DisplayNN(index);
 			std::cout << std::endl;
 		}
-		break;
+		else
+			break;
 		index++;
 	}
 	if (!_contacts[0].getFirstName().empty())
@@ -189,7 +190,7 @@ void	PhoneBook::Search()
 		}
 		std::cout << std::endl;
 		std::istringstream(i) >> nb;
-		if (nb >= 0 && nb <= index)
+		if (nb >= 0 && nb < index && !(nb == 0 && i.compare("0") != 0))
 			PhoneBook::DisplayAllInfo(nb);
 		else
 			std::cout << "\t\tsorry contact not found !!\n";
