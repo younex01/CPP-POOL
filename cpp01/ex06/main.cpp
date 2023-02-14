@@ -6,22 +6,17 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 13:41:23 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/14 15:31:20 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/14 20:13:44 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main()
+int main(int ac, char **av)
 {
 	Harl harl;
 
-	harl.complain("DEBUG");
-	std::cout << std::endl;
-	harl.complain("INFO");
-	std::cout << std::endl;
-	harl.complain("WARNING");
-	std::cout << std::endl;
-	harl.complain("ERROR");
+	if (ac == 2)
+		harl.complain(av[1]);
 	return (0);
 }

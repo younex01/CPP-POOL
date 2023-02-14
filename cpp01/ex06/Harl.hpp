@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 13:41:20 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/14 15:25:02 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/14 20:11:36 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 	void warning( void );
 	void error( void );
 public:
-	Harl(/* args */);
+	Harl();
 	~Harl();
 	void complain( std::string level );
 };
