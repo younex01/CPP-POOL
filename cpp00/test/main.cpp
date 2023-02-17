@@ -58,42 +58,54 @@ int main()
 // 	std::cout << nb;
 // }
 
-#include <iostream>
-#include <string>
+// #include <iostream>
+// #include <string>
 
-void byPtr(std::string* str)
-{
-	*str += " and ponies";
-}
+// void byPtr(std::string* str)
+// {
+// 	*str += " and ponies";
+// }
 
-void byConstPtr(std::string const * str)
-{
-	std::cout << *str << std::endl;
-}
+// void byConstPtr(std::string const * str)
+// {
+// 	std::cout << *str << std::endl;
+// }
 
-void byRef(std::string& str)
-{
-	str += " and ponies";
-}
+// void byRef(std::string& str)
+// {
+// 	str += " and ponies";
+// }
 
-void byConstRef(std::string const & str)
-{
-	std::cout << str << std::endl;
-}
+// void byConstRef(std::string const & str)
+// {
+// 	std::cout << str << std::endl;
+// }
+
+// int main()
+// {
+// 	std::string str = "i like butterflies";
+
+// 	std::cout << str << std::endl;
+// 	byPtr(&str);
+// 	byConstPtr(&str);
+
+// 	str = "i like otters";
+
+// 	std::cout << str << std::endl;
+// 	byRef(str);
+// 	byConstRef(str);
+
+// 	return (0);
+// }
 
 int main()
 {
-	std::string str = "i like butterflies";
+	// float a = 0.1;
+	// float b = 0.2;
+	// float c = a + b; 
+	// printf ("%0.8f\n", c);
+	int a = 22;
+	int b = 3; 
 
-	std::cout << str << std::endl;
-	byPtr(&str);
-	byConstPtr(&str);
-
-	str = "i like otters";
-
-	std::cout << str << std::endl;
-	byRef(str);
-	byConstRef(str);
-
-	return (0);
+	printf("%d", a/b); // 7 or 7.333333
 }
