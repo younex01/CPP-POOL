@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 21:09:50 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/17 21:46:38 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/18 22:39:56 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,57 +23,17 @@ private:
 public:
     Point();
     Point(const float x, const float y);
+    // Point(const int x, const int y);
+    // Point(const Fixed x, const Fixed y);
     Point & operator=(const Point &point);
     Point(const Point & point);
-    void setX(const Fixed &x);
-    void setY(const Fixed y);
-    Fixed getX(void) const;
-    Fixed getY(void) const;
+    float getX(void) const;
+    float getY(void) const;
     ~Point();
 };
 
-Point::Point(): _x(0), _y(0)
-{
-}
-
-
-Point::Point(const Point & point)
-{
-    *this = point;
-}
-
-// Point::Point(const float x, const float y)
-// {
-//     this->_x.setRawBits(x);
-//     this->_y.setRawy;
-// }
-
-Point & Point::operator=(const Point &point)
-{
-    if(this != &point)
-        this.
-}
-
-Point::~Point()
-{
-}
-
-void Point::setX(const Fixed & x)
-{
-    this->&_x = x;
-}
-void Point::setY(const Fixed y)
-{
-    this->_y = y;
-}
-Fixed Point::getX(void) const
-{
-    
-}
-Fixed getY(void) const
-{
-    
-}
+bool bsp( Point const a, Point const b, Point const c, Point const point);
+float areaTriangle( Point const a, Point const b, Point const c);
 
 
 #endif

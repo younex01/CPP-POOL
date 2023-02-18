@@ -6,11 +6,11 @@
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/15 17:24:37 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/17 19:43:17 by yelousse         ###   ########.fr        #
+#    Updated: 2023/02/18 18:18:14 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp Fixed.cpp bsp.cpp Point.cpp
 
 CC = c++
 
@@ -20,11 +20,11 @@ RM = rm -f
 
 OBJS = $(SRC:.cpp=.o)
 
-NAME = Fixed
+NAME = bsp
 
 all : $(NAME)
 
-%.o : %.cpp Fixed.hpp
+%.o : %.cpp Fixed.hpp Point.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)

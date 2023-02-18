@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:24:32 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/17 21:43:03 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/18 20:33:59 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ public:
 	static const Fixed &min(const Fixed &a, const Fixed &b);
 	static const Fixed &max(Fixed &a, Fixed &b);
 	static const Fixed &min(Fixed &a, Fixed &b);
+	Fixed	operator*(const float &fixed) const;
 };
 
 std::ostream & operator<<(std::ostream & o, Fixed const & fixed);

@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:24:29 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/17 21:36:07 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/18 21:06:52 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,41 @@
 
 Fixed::Fixed() :_value(0)
 {
-	std::cout << "Default constructor called" 
-			  << std::endl;
+	// std::cout << "Default constructor called" 
+	// 		  << std::endl;
 }
 
 Fixed::Fixed(const int n)
 {
-	std::cout << "Int constructor called"
-			  << std::endl;
+	// std::cout << "Int constructor called"
+	// 		  << std::endl;
 	this->_value = n << this->_fract;
 }
 
 Fixed::Fixed(const float n)
 {
-	std::cout << "Float constructor called"
-			  << std::endl;
+	// std::cout << "Float constructor called"
+	// 		  << std::endl;
 	this->_value = roundf(n * (1 << this->_fract));
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called"
-			  << std::endl;
+	// std::cout << "Destructor called"
+	// 		  << std::endl;
 }
 
 Fixed::Fixed(const Fixed & fixed)
 {
-	std::cout << "Copy constructor called"
-			  << std::endl;
+	// std::cout << "Copy constructor called"
+	// 		  << std::endl;
 	*this = fixed;
 }
 
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
-	std::cout << "Copy assignment operator called"
-			  << std::endl;
+	// std::cout << "Copy assignment operator called"
+	// 		  << std::endl;
 	if(this != &fixed)
 		this->setRawBits(fixed.getRawBits());
 	return *this;
@@ -93,6 +93,14 @@ Fixed Fixed::operator*(const Fixed &fixed) const {
 	Fixed tmp;
 	
 	long long n = this->_value * fixed.getRawBits();
+	tmp._value = n >> this->_fract;
+	return tmp;
+}
+
+Fixed Fixed::operator*(const float &fixed) const {
+	Fixed tmp;
+	
+	long long n = this->_value * fixed;
 	tmp._value = n >> this->_fract;
 	return tmp;
 }
