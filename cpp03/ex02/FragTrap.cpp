@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 20:14:41 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/22 00:15:33 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/23 18:22:21 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,16 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap Destructor called" << std::endl;   
 }
 
-FragTrap & FragTrap::operator=(FragTrap const & FragTrap)
+FragTrap & FragTrap::operator=(FragTrap const & fragtrap)
 {
 	std::cout << "FragTrap Copy assignment operator called" << std::endl;
-	if(this != &FragTrap)
-		setName(FragTrap.getName());
+    if(this != &fragtrap)
+    {
+        this->_name = fragtrap._name;
+        this->_hit = fragtrap._hit;
+        this->_energy = fragtrap._energy;
+        this->_attack = fragtrap._attack;
+    }
 	return *this;
 }
 
@@ -52,7 +57,7 @@ void FragTrap::attack(const std::string& target)
 {
     if (getHit() == 0 || getEnergy() == 0)
     {
-        std::cout << getName() << "FragTrap has no energy or health points left to attack." << std::endl;
+        std::cout << getName() << " FragTrap has no energy or health points left to attack." << std::endl;
         return;
     }
     this->_energy--;
@@ -61,5 +66,5 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << "Hey, let's give each other a high five! Up top!" << std::endl;
+    std::cout << "Hey, let's give each other a high five!" << std::endl;
 }

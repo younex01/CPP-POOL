@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 20:14:41 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/21 22:47:37 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:03:00 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,12 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & scavtrap)
 {
 	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
 	if(this != &scavtrap)
-		setName(scavtrap.getName());
+    {
+        this->_name = scavtrap._name;
+        this->_hit = scavtrap._hit;
+        this->_energy = scavtrap._energy;
+        this->_attack = scavtrap._attack;
+    }
 	return *this;
 }
 
@@ -52,7 +57,7 @@ void ScavTrap::attack(const std::string& target)
 {
     if (getHit() == 0 || getEnergy() == 0)
     {
-        std::cout << getName() << "ScavTrap has no energy or health points left to attack." << std::endl;
+        std::cout << getName() << " ScavTrap has no energy or health points left to attack." << std::endl;
         return;
     }
     this->_energy--;

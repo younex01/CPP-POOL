@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:36:10 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/21 19:54:01 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:07:52 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,22 @@ ClapTrap & ClapTrap::operator=(ClapTrap const & claptrap)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &claptrap)
+    {
 		this->_name = claptrap.getName();
+        this->_hit  = claptrap._hit;
+		this->_energy = claptrap._energy;
+		this->_attack = claptrap._attack;
+    }
 	return *this;
 }
 
 void ClapTrap::setName(std::string name)
 {
-	std::cout << "setName member function called" << std::endl;
     this->_name = name;
 }
 
 std::string ClapTrap::getName(void) const
 {
-    std::cout << "getName member function called"
-            << std::endl;
     return (this->_name);
 }
 

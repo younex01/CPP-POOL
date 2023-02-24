@@ -5,14 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/21 16:36:19 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/23 18:56:10 by yelousse         ###   ########.fr        #
+#    Created: 2023/02/24 00:54:50 by yelousse          #+#    #+#              #
+#    Updated: 2023/02/24 02:57:22 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
-
-NAME = DiamondTrap
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+NAME = Animal
 
 OBJCS = ${SRC:.cpp=.o}
 
@@ -28,7 +27,7 @@ $(NAME): $(OBJCS)
 	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 	@echo "Compiling Successfull"
 
-%.o:%.cpp ClapTrap.hpp FragTrap.hpp DiamondTrap.hpp ScavTrap.hpp
+%.o:%.cpp Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:

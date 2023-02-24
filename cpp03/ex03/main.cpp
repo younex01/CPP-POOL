@@ -6,20 +6,25 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:36:16 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/21 23:59:57 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/23 18:40:55 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-	FragTrap	player("player1");
+	DiamondTrap	player("player1"); //100
+	DiamondTrap	player2("player2"); //100
+	
+	std::cout << "-----------------------------------" << std::endl;
 	
 	player.attack("player2");
-	player.takeDamage(5);
-	player.beRepaired(10);
-	player.takeDamage(15);
+	player2.takeDamage(50); //50
+	player2.beRepaired(10); // 60
+	player2.attack("player1");
+	player.takeDamage(100); // 100 - 100 = 0
 	player.attack("player2");
-	player.takeDamage(5);
+	player2.whoAmI();
+	std::cout << "-----------------------------------" << std::endl;
 }
