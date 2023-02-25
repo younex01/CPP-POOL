@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youness <youness@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 01:13:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 18:21:48 by youness          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:27:25 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int main()
    {
         std::cerr << e.what() << std::endl;  
    }
+   
    return(0);
 }

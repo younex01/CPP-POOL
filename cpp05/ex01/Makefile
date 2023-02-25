@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: youness <youness@student.42.fr>            +#+  +:+       +#+         #
+#    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/25 01:13:41 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/25 18:14:12 by youness          ###   ########.fr        #
+#    Updated: 2023/02/25 19:23:59 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp 
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 NAME = Bureaucrat
 
 OBJCS = ${SRC:.cpp=.o}
