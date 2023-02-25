@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 00:54:47 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/24 18:55:56 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/24 18:57:34 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 int main()
 {
-	Animal	*animals[4];
+	AAnimal	*animals[4];
+	// AAnimal cat;
 
 	for (int i = 0; i < 4; i++)
 	{
