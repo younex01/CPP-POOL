@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/25 01:13:41 by yelousse          #+#    #+#              #
-#    Updated: 2023/02/26 00:57:26 by yelousse         ###   ########.fr        #
+#    Created: 2023/02/27 05:59:24 by yelousse          #+#    #+#              #
+#    Updated: 2023/02/27 07:43:27 by yelousse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
-NAME = Bureaucrat
+SRC = main.cpp Base.cpp
+NAME = Identifyer
 
 OBJCS = ${SRC:.cpp=.o}
 
@@ -27,11 +27,11 @@ $(NAME): $(OBJCS)
 	@$(CPP) $(FLAGS) $(SRC) -o $(NAME)
 	@echo "Compiling Successfull"
 
-%.o:%.cpp Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp
+%.o:%.cpp Base.hpp A.hpp B.hpp C.hpp
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJCS) *_shrubbery
+	@$(RM) $(OBJCS)
 	@echo "Object Files Removed Successfully"
 
 fclean:clean

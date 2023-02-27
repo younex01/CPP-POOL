@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 01:13:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 20:58:03 by yelousse         ###   ########.fr       */
+/*   Created: 2023/02/27 01:09:00 by yelousse          #+#    #+#             */
+/*   Updated: 2023/02/27 05:04:28 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef SCALARCONVERTER_HPP
+#define SCALARCONVERTER_HPP
 
-int main()
+#include <iostream>
+#include "DetectType.hpp"
+#include "PrintMsg.hpp"
+
+class ScalarConverter
 {
-   try
-   {
-        Form form("form", 14, 15);
-        Bureaucrat burr("Bureau", 13);
-     //    Bureaucrat burr("Bureau", 15);
-        form.beSigned(burr);
-        burr.signForm(form);
-        std::cout << form << std::endl; 
-   }
-   catch(const std::exception & e)
-   {
-        std::cerr << e.what() << std::endl;  
-   }
-   
-   return(0);
-}
+private:
+	
+public:
+	ScalarConverter();
+	ScalarConverter(ScalarConverter const &);
+	~ScalarConverter();
+	ScalarConverter &operator=(ScalarConverter const &);
+	static void convert(std::string str);
+};
+
+#endif

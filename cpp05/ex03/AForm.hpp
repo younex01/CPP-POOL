@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 19:27:02 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 21:22:23 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:26:30 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class AForm
         AForm();
         AForm(const std::string name, int const signGrade, int const executeGrade);
         AForm(AForm const & src);
-        ~AForm();
+        virtual ~AForm();
         AForm & operator=(AForm const & obj);
         std::string    getName() const;
         bool   getSigned() const;

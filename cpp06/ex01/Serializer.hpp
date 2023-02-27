@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 01:13:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 20:58:03 by yelousse         ###   ########.fr       */
+/*   Created: 2023/02/27 05:14:03 by yelousse          #+#    #+#             */
+/*   Updated: 2023/02/27 05:50:18 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
 
-int main()
+#include <cstdint>
+#include <iostream>
+#include "Data.hpp"
+
+class Serializer
 {
-   try
-   {
-        Form form("form", 14, 15);
-        Bureaucrat burr("Bureau", 13);
-     //    Bureaucrat burr("Bureau", 15);
-        form.beSigned(burr);
-        burr.signForm(form);
-        std::cout << form << std::endl; 
-   }
-   catch(const std::exception & e)
-   {
-        std::cerr << e.what() << std::endl;  
-   }
-   
-   return(0);
-}
+private:
+    
+public:
+    Serializer();
+    Serializer(Serializer const &other);
+    ~Serializer();
+    Serializer &operator=(const Serializer &other);
+    static uintptr_t serialize(Data* ptr);
+    static Data* deserialize(uintptr_t raw);
+};
+
+
+
+#endif

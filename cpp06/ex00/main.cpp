@@ -5,28 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 01:13:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 20:58:03 by yelousse         ###   ########.fr       */
+/*   Created: 2023/02/27 05:01:56 by yelousse          #+#    #+#             */
+/*   Updated: 2023/02/27 05:03:35 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "ScalarConverter.hpp"
 
-int main()
+int main(int ac, char **av)
 {
-   try
-   {
-        Form form("form", 14, 15);
-        Bureaucrat burr("Bureau", 13);
-     //    Bureaucrat burr("Bureau", 15);
-        form.beSigned(burr);
-        burr.signForm(form);
-        std::cout << form << std::endl; 
-   }
-   catch(const std::exception & e)
-   {
-        std::cerr << e.what() << std::endl;  
-   }
-   
-   return(0);
+	std::string	str;
+
+	if (ac == 2)
+	{
+		str = av[1];
+		try
+		{
+			ScalarConverter::convert(str);
+		}
+		catch (const char* err)
+		{
+			std::cerr << err << std::endl;
+		}
+	}
+	return 0;
 }

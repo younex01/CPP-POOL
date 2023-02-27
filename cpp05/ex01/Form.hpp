@@ -6,7 +6,7 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 19:23:00 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 19:23:01 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/25 20:37:21 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ class Form
         Form();
         Form(const std::string name, int const signGrade, int const executeGrade);
         Form(Form const & src);
-        virtual ~Form();
-        virtual Form & operator=(Form const & obj);
+        ~Form();
+        Form & operator=(Form const & obj);
         std::string    getName() const;
         bool   getSigned() const;
         int    getSignGrade() const;

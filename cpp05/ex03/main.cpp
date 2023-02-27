@@ -6,32 +6,46 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 01:13:38 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 20:35:19 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/26 01:04:50 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
 	try
 	{
-		Bureaucrat test("hassan", 2);
-		std::cout << test << std::endl;
-		
-		test.decGrade();
-		std::cout << test << std::endl;
-		
-		test.incGrade();
-		std::cout << test << std::endl;
-		
-		test.incGrade();
-		std::cout << test << std::endl;
-
-		// test.incGrade();
+		// Bureaucrat test("m9adem", 2);
 		// std::cout << test << std::endl;
 
-		// Bureaucrat test2("test 2", 160);
+		// ShrubberyCreationForm s("shrubbery");
+		// s.beSigned(test); //true
+		// s.execute(test);
+		// test.executeForm(s);
+
+		// RobotomyRequestForm r("robot");
+		// r.beSigned(test);
+		// r.execute(test);
+		// test.executeForm(r);
+
+		// PresidentialPardonForm p("president");
+		// p.beSigned(test);
+		// p.execute(test);
+		// test.executeForm(p);
+
+		
+		Intern someRandomIntern;
+		AForm* rrf;
+		
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+
+		std::cout << std::endl;
+		delete rrf;
 	}
 	catch (std::exception &e)
 	{

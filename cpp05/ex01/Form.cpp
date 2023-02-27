@@ -6,13 +6,13 @@
 /*   By: yelousse <yelousse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 19:22:54 by yelousse          #+#    #+#             */
-/*   Updated: 2023/02/25 19:22:55 by yelousse         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:52:40 by yelousse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): _name("form"), _signed(false), _signGrade(100), _executeGrade(30)
+Form::Form(): _name("form"), _signed(false), _signGrade(10), _executeGrade(30)
 {
     std::cout << "Form : Default Constructor called" << std::endl;
 }
