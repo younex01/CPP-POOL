@@ -11,3 +11,10 @@ day05:
 https://www.learncpp.com/cpp-tutorial/basic-exception-handling/
 https://www.sandordargo.com/blog/2020/07/22/always-catch-exceptions-by-reference
 https://ascii.co.uk/art/tree
+
+day06:
+
+https://www.geeksforgeeks.org/reinterpret_cast-in-c-type-casting-operators/
+https://stackoverflow.com/questions/13642827/cstdint-vs-stdint-h
+https://stackoverflow.com/questions/1845482/what-is-the-uintptr-t-data-type
+https://www.geeksforgeeks.org/raw-string-literal-c/
